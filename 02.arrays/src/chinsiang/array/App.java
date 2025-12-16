@@ -25,5 +25,9 @@ public class App {
                 customer.setSize("X");
                 break;
         }
+
+        Clothing item1 = new Clothing("white shirt", 5, "S");
+        Clothing item2 = new Clothing("blue shirt", 10, "S");
+        Clothing[] items = {item1, item2};
     }
 }
