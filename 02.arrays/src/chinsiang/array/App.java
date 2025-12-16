@@ -26,8 +26,10 @@ public class App {
                 break;
         }
 
-        Clothing item1 = new Clothing("white shirt", 5, "S");
+        Clothing item1 = new Clothing("white shirt", 5, "M");
         Clothing item2 = new Clothing("blue shirt", 10, "S");
+        Clothing item3 = new Clothing("green scarf", 5, "S");
+        Clothing item4 = new Clothing("blue t-shirt", 10.5, "S");
         Clothing[] items = {item1, item2};
 
         final double tax = 0.2;
@@ -35,9 +37,13 @@ public class App {
         double total = 0.0;
 
         for (Clothing clothing : items) {
-            total += clothing.getPrice();
-            // System.out.println(clothing.toString());
-            System.out.println(clothing.getDescription() + ": " + clothing.getPrice());
+            if(customer.getSize().equals(clothing.getSize())){
+                total += clothing.getPrice();
+                System.out.println(clothing.getDescription() + ": " + clothing.getPrice());
+                if(total > 15){
+                    break;
+                }
+            }
         }
 
         System.out.println("total" + ": " + total);
