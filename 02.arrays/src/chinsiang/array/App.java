@@ -29,5 +29,17 @@ public class App {
         Clothing item1 = new Clothing("white shirt", 5, "S");
         Clothing item2 = new Clothing("blue shirt", 10, "S");
         Clothing[] items = {item1, item2};
+
+        final double tax = 0.2;
+        // double total = (cloth1.getPrice() + cloth2.getPrice()) * (1 + tax);
+        double total = 0.0;
+
+        for (Clothing clothing : items) {
+            total += clothing.getPrice();
+            // System.out.println(clothing.toString());
+            System.out.println(clothing.getDescription() + ": " + clothing.getPrice());
+        }
+
+        System.out.println("total" + ": " + total);
     }
 }

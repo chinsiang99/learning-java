@@ -21,4 +21,8 @@ public class Customer {
     public void setSize(String size){
         this.size = size;
     }
+
+    public String getSize(){
+        return size;
+    }
 }
